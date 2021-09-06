@@ -1,0 +1,66 @@
+How to select element in Javascript??
+
+document.querySelector('.className');
+document.querySelector('#id');
+
+to get only the text in the selected element we need to declare 
+: document.querySelector('.className').textContent;
+
+What is DOM and DOM Manipulation?
+=> DOM stands for document object model. Dom is a structured representaion of HTML documents allows javascript to access HTML elements and 
+styles to Manipulate them.
+We will be able to change text ,html attributes and css styles to javascript code.
+
+DOM !== Javascript 
+
+DOM is not a part of javascript. Dom and DOM method actually part of web api. Web api can interact with Javascript.
+Web api's are the libraries that can be accessed with javascript code.
+API = Aplication Program interface. 
+
+We can set the textContent to something else using querySelector.
+example:  
+        document.querySelector('.message').textContent = 'Correct Number!';
+
+
+This procedure will work for only item where there is some previous text available. But for input 
+field you have to define value instead of textContent.
+example:
+        console.log((document.querySelector('.guess').value));
+  
+
+  ######## Class 2 ########
+  ** function is a value.
+
+Handling Click Event
+when we click on any button then something should happen.
+document.querySelector('.check).addEventListener('click',function(){
+        console.log(document.querySelector(.guess).value);
+})
+
+
+querySelector('.check) this will select the class check.
+addEventListener('click',function() this will add an event which will work only when a event occurs. This event can be 
+click event and also many more. First argument work for click and 2nd argument is normal function and can do function works.
+
+
+usually whenever we get something from the interface we get string. so we have to chnge it in number before changing it
+
+
+const number = Math.trunc(Math.random() * 20 + 1);
+
+Here math.random() will give a value in between 0-.99999.......
+Math.random()*20 will give a value in between 0 - 19.9999999999...........
+Math.trunc(Math.random()*20) will give a value between 0-19 //it will trunc the .99999 number / decimal numbers.
+but we want 0-20 thats why we need to add 1 here.
+Math.trunc(Math.random()*20)+1;
+
+
+######### CSS dom manipulation #######
+
+To change a color of css after a certain task : 
+document.querySelector('body').style.backgroundColor = '#60b347';
+
+here we have to define style as we are going to change the css color or property. Then we have to select the property we want to change.
+In this case backgroundColor.. And we have to right backgroundColor in camelcase we cannot do (background-color 🚫) this - is not valid in javascript.
+
+the value ('#60b347') always needs to be string. 
